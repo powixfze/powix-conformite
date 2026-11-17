@@ -202,6 +202,9 @@ ul,ol{padding-left:1.2em}
 .docs strong{display:block;color:var(--ink);font-size:1.02rem;margin-bottom:.2em}
 .docs .ref{display:block;margin-top:.5em;font-size:.84rem;font-weight:600;color:var(--green-ink)}
 .lang span[aria-current]{white-space:nowrap}
+.lang span .cc-long{padding:0;border-radius:0}
+.lang .cc-short{display:none;text-decoration:none}
+@media (max-width:359px){.lang .cc-long{display:none}.lang .cc-short{display:inline}.lang a,.lang span[aria-current]{padding:.35em .5em}}
 
 /* ---- Exemple ---- */
 .example-box{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,4vw,40px);box-shadow:var(--shadow-sm);overflow:hidden}
@@ -278,7 +281,7 @@ ul,ol{padding-left:1.2em}
     <nav class="lang" aria-label="Language and country">
       <a href="/" hreflang="fr" lang="fr" title="Version française">FR</a>
       <a href="/en/" hreflang="en" title="International page (English)">EN</a>
-      <span aria-current="page" title="Sweden page, in English">SE</span>
+      <span aria-current="page" title="Sweden page, in English"><span class="cc-long">Sweden</span><abbr class="cc-short" title="Sweden">SE</abbr></span>
     </nav>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" hidden>Menu</button>
   </div>
