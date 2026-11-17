@@ -6,8 +6,10 @@ Site statique une page, FR + EN, sans framework, sans CDN, sans cookie, sans tra
 site/
 ├── index.html          page FR  → https://powix.io/
 ├── en/index.html       page EN  → https://powix.io/en/
+├── se/index.html       page Suède (en anglais, hreflang en-SE) → https://powix.io/se/
 ├── og-image.png        image Open Graph FR (1200×630)
 ├── og-image-en.png     image Open Graph EN (1200×630)
+├── og-image-se.png     image Open Graph de la page Suède (1200×630)
 ├── vercel.json         en-têtes de sécurité + URLs propres (Vercel uniquement)
 ├── .vercelignore       exclut screenshots/, tools/ et ce README du déploiement CLI
 ├── screenshots/        captures de contrôle (ne pas déployer)
@@ -117,6 +119,7 @@ Les montants n'apparaissent **que** dans la section `<section id="packs">` de ch
 
 - FR : `index.html`, entre `<!-- PRIX — SEUL ENDROIT À MODIFIER (page FR) -->` et `<!-- FIN DU BLOC PRIX -->`
 - EN : `en/index.html`, entre `<!-- PRICES — THE ONLY PLACE TO EDIT (EN page) -->` et `<!-- END OF PRICE BLOCK -->`
+- Suède : `se/index.html`, même bloc (`PRICES — THE ONLY PLACE TO EDIT (Sweden page)`) ; mêmes montants que la page EN, à modifier en même temps. Les prix des packs A et B figurent aussi dans le JSON-LD de chaque page.
 
 Le reste de la page (FAQ, bloc MSP, hero) renvoie aux cartes sans répéter de chiffre. Dans chaque carte :
 
