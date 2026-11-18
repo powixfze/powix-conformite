@@ -1,15 +1,20 @@
 # Site « Powix Conformité » — powix.io
 
-Site statique une page, FR + EN, sans framework, sans CDN, sans cookie, sans traceur, sans formulaire.
+Site statique, FR + EN + pages pays (Suède, Belgique, Luxembourg), sans framework, sans CDN, sans cookie, sans traceur, sans formulaire.
 
 ```
 site/
 ├── index.html          page FR  → https://powix.io/
 ├── en/index.html       page EN  → https://powix.io/en/
 ├── se/index.html       page Suède (en anglais, hreflang en-SE) → https://powix.io/se/
+├── be/index.html       page Belgique (en français, hreflang fr-BE) → https://powix.io/be/
+├── lu/index.html       page Luxembourg (en français, hreflang fr-LU) → https://powix.io/lu/
 ├── og-image.png        image Open Graph FR (1200×630)
 ├── og-image-en.png     image Open Graph EN (1200×630)
 ├── og-image-se.png     image Open Graph de la page Suède (1200×630)
+├── og-image-be.png     image Open Graph de la page Belgique (1200×630)
+├── og-image-lu.png     image Open Graph de la page Luxembourg (1200×630)
+├── sitemap.xml         5 URL, chacune avec ses alternates hreflang (fr, en, en-SE, fr-BE, fr-LU, x-default)
 ├── vercel.json         en-têtes de sécurité + URLs propres (Vercel uniquement)
 ├── .vercelignore       exclut screenshots/, tools/ et ce README du déploiement CLI
 ├── screenshots/        captures de contrôle (ne pas déployer)
@@ -120,6 +125,9 @@ Les montants n'apparaissent **que** dans la section `<section id="packs">` de ch
 - FR : `index.html`, entre `<!-- PRIX — SEUL ENDROIT À MODIFIER (page FR) -->` et `<!-- FIN DU BLOC PRIX -->`
 - EN : `en/index.html`, entre `<!-- PRICES — THE ONLY PLACE TO EDIT (EN page) -->` et `<!-- END OF PRICE BLOCK -->`
 - Suède : `se/index.html`, même bloc (`PRICES — THE ONLY PLACE TO EDIT (Sweden page)`) ; mêmes montants que la page EN, à modifier en même temps. Les prix des packs A et B figurent aussi dans le JSON-LD de chaque page.
+- Belgique et Luxembourg : `be/index.html` et `lu/index.html`, bloc `PRIX — SEUL ENDROIT À MODIFIER (page Belgique|Luxembourg)` ; mêmes montants que la page EN (option CyFun +400 € HT sur la page Belgique seulement), à modifier en même temps.
+
+Navigation entre pays : chaque page porte, dans son pied de page, une ligne « Pays » (« Countries » sur les pages en anglais) liant France, International (EN), Belgique, Luxembourg et Sweden. Les pages Belgique et Luxembourg citent leurs sources juridiques dans la section `#cadre-legal`, état lu le 18 novembre 2026 : à relire avant toute modification des textes.
 
 Le reste de la page (FAQ, bloc MSP, hero) renvoie aux cartes sans répéter de chiffre. Dans chaque carte :
 
